@@ -411,7 +411,8 @@ document.getElementById('submit').addEventListener('click',()=>{
     localStorage.setItem('Message',message);
 
     modal.style.display = "block";
-    para.innerText =`Your details has been submitted! I will get back you as soon as possible.`
+    para.innerText =`Thank you ${name} for submitting your question.`;
+
     span.onclick = function() {
       modal.style.display = "none";
     }
