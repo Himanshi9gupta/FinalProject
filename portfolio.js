@@ -216,7 +216,7 @@ let response = await fetchImages();
    let data = await response;
     let card;
   let frontEndClient = [ "ATP world tour", "Boeing", "HSBC"];
-  let frontEndPro = [ "Barclays ATP World Tour","Digital Innovation Lab",]
+  let frontEndPro = [ "Barclays ATP World Tour","Digital Innovation Lab","HSBC banking portal"]
   for(let i = 0;i<3;i++){
     card = document.createElement('div');
    card.style.width = '25.33%';
