@@ -384,6 +384,10 @@ const CustomerBoeing = ()=>{
     }
 }
 
+const username = document.getElementById('name');
+const message = document.getElementById('message');
+const phone = document.getElementById('phone');
+const email = document.getElementById('email');
 const hsbcPortal = ()=>{
    
     modal.style.display = "block";
@@ -401,17 +405,82 @@ const hsbcPortal = ()=>{
     }
 }
 
-document.getElementById('submit').addEventListener('click',()=>{
-    let name = document.getElementById('name').value;
-    let email = document.getElementById('email').value;
-    let message = document.getElementById('message').value;
+const emailValidation = ()=>{
+ 
+  const emailPattern = new RegExp(/\w+\@+\w+\.+[\w]{3}/g);
+  if(!emailPattern.test(email.value)){
+    email.setCustomValidity("Please enter valid email address.")
+    
+  }
+  else{
+    email.setCustomValidity('');
+  }
 
-    localStorage.setItem('Name',name);
-    localStorage.setItem('Email',email);
-    localStorage.setItem('Message',message);
+}
 
+const nameValidation = ()=>{
+  if(username.value.length < 1){
+    username.setCustomValidity("Name cannot be left blank");
+    
+  }
+  else{
+    username.setCustomValidity('');
+  }
+
+
+}
+
+const messageValidation = ()=>{
+  if(message.value.length < 1){
+    message.setCustomValidity('Message cannot be empty');
+    
+  }
+  else{
+    message.setCustomValidity('')
+  }
+
+}
+
+const validation = ()=>{
+  
+  let regex = new RegExp(/^\(?([0-9]{3})\)?[-\s]([0-9]{3})[-\s]([0-9]{4})$/);
+  
+  if(phone.value.length < 1 || !(regex.test(phone.value))){
+    phone.setCustomValidity('please check the number input');
+  }
+  else{
+    phone.setCustomValidity('')
+  }
+
+  emailValidation();
+  nameValidation();
+  messageValidation();
+
+
+}
+
+document.getElementById('submit').addEventListener('click',(e)=>{
+    let fullname = username.value;
+    let emailVal = email.value;
+    let messageVal = message.value;
+    let phoneVal =phone.value;
+    validation();
+    localStorage.setItem('Name',fullname);
+    localStorage.setItem('Email',emailVal);
+    localStorage.setItem('Message',messageVal);
+    localStorage.setItem('phone',phoneVal);
     modal.style.display = "block";
-    para.innerText =`Thank you ${name} for submitting your question.`;
+
+    if(username.validity.valid === true && message.validity.valid === true && email.validity.valid === true && phone.validity.valid === true){
+      e.preventDefault();
+      para.innerText =`Thank you ${fullname} for submitting your question.`;
+        
+    }
+    else{
+      e.preventDefault();
+      para.innerText =`Please make sure the inputs enter are valid`;
+    }
+    
 
     span.onclick = function() {
       modal.style.display = "none";
