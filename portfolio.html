@@ -14,11 +14,16 @@
 <body>
     <div class="container">
         <nav id="navbar" class="flex">
+            <div class="navDiv">
             <button id="nav1" class="nav">Home</button>
             <button id="nav2" class="nav">About</button>
             <button id="nav3" class="nav">Projects</button>
             <button id="nav4" class="nav">Achievements</button>
             <button id="nav5" class="nav">Contact</button>
+            <button id="emailBtn" class="nav"><a href="mailto:himanshigupta2211@gmail.com">Email</a></button>
+            <button id="mobileBtn" class="nav"><a href="tel:+1 (484) 744 1436">Mobile</a></button>
+        
+         </div>
         </nav>
         <section id="home" style="height: 1000px;">
             <div class="backgroundBody">
@@ -27,16 +32,21 @@
 
                 <div class="text">
                     <h1>Hello, I'm <span class="name">Himanshi Gupta</span>.</h1>
-                    <h1>I'm a Front End Developer.</h1>
-                    <button id="myWork" dest="homme">View my work &#8594;</button>
+                    <p class="homeText">I'm a programmer by pursuit, an innovator by laziness, artist and creative in work and a calculated risk-taker.</p>
+                    <div id="homePageBtn">
+                    <button id="myWork" dest="homme">Project history &#8594;</button>
+                    <button id="gitBtn" class="homeBtn"><a href="https://github.com/Himanshi9gupta/FinalProject">Github Project</a></button>
+                    <button id="workBtn" class="homeBtn"><a href="https://www.atptour.com/">My work</a></button>
                 </div>
+                </div>
+                
             </div>
         
-
+           
         </section>
 
-        </section>
-        <footer>Himanshi Gupta Resume@2022</footer>
+
+      
         <section id="about" style="height: 990px;">
             <header class="projectHeader ">
                 <h1 class="aboutHeader">ABOUT <hr> </h1>
@@ -45,7 +55,7 @@
         </header>
             
 
-            <div class="ovalDiv" >
+            <div id="animDiv" class="ovalDiv" >
                 <div class="oval">
                     <p>Fast</p>
                     <div>
@@ -79,16 +89,46 @@
             <div class="myDetailsDiv" style="margin-top: 4%;">
 
                 <div id="aboutMe" style="display: flex;">
-                    <div style="width:50%;height:574px;">
-                        <img src="Images/IMG_2060 2.png" alt="my picture" class="myPicture">
-                        <div style="margin-top: -13%; ">
-                            <h2>Who's this?</h2>
-                            <p>I'm a Software Developer for T-Mobile in Bellevue, WA.</p>
-                            <p>I have a passion for UI responsive designing and creating intuitive, dynamic user experience.</p>
-                            <p style="color:#04c2c9;">Let's make something special.</p>
+                    <div style="width:50%;height:574px;    padding-right: 25px;">
+                        
+                        <div class="marginTop5">
+                           <label>CODEBASE</label>
+                           <div>
+                                <p>My contributions can be found in my Github profile: 
+                                <a class="githubLink" href="https://github.com/Himanshi9gupta/FinalProject">https://github.com/Himanshi9gupta/FinalProject</a>
+                            </p>
+                            </div>
+                        <div>
+                           
+                            <p>Past work demo:<a class="githubLink" href="https://www.atptour.com"> ATP Tour</a></p> 
                         </div>
-                    </div>
-                   
+                        </div> 
+                        
+                        
+                            <table id="framework">
+                                <thead>
+                                    <tr><th>FRAMEWORK</th>
+                                   <th>TECHNOLOGIES</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                    <td>Spring boot</td>
+                                    <td>GIT</td>
+                                </tr>
+                                <tr>
+                                    <td>Angular</td>
+                                    <td>Jenkins</td>
+                                </tr>
+                                <tr>
+                                    <td>React</td>
+                                    <td>AWS (Awareness)</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        
+                  
+                   </div>
+            
             <div class="skillsDiv">
                 <div id="myProgress">
                     <div class="myBar fill value-90" id="bar1"><div class="skillText">CSS</div><div
@@ -99,36 +139,36 @@
                             class="percentage">90%</div></div>
                 </div>
                 <div id="myProgress">
-                    <div class=" myBar fill value-80" id="bar3"><div class="skillText">JavaScript</div><div
-                            class="percentage">80%</div></div>
+                    <div class=" myBar fill value-85" id="bar3"><div class="skillText">JavaScript</div><div
+                            class="percentage">85%</div></div>
                 </div>
                 <div id="myProgress">
-                    <div class="myBar fill value-70" id="bar4"><div class="skillText">Spring boot framework</div><div
+                    <div class="myBar fill value-80" id="bar4"><div class="skillText">Spring boot</div><div
+                            class="percentage">80%</div></div>
+                </div>
+
+                <div id="myProgress">
+                    <div class="myBar fill value-75" id="bar5"><div class="skillText">Angular</div><div
+                            class="percentage">75%</div></div>
+                </div>
+                <div id="myProgress">
+                    <div class="myBar fill value-70" id="bar6"><div class="skillText">Restful API</div><div
+                            class="percentage">70%</div></div>
+                </div>
+                <div id="myProgress">
+                    <div class="myBar fill value-70" id="bar7"><div class="skillText">UI Design</div><div
                             class="percentage">70%</div></div>
                 </div>
 
                 <div id="myProgress">
-                    <div class="myBar fill value-65" id="bar5"><div class="skillText">Angular</div><div
-                            class="percentage">65%</div></div>
-                </div>
-                <div id="myProgress">
-                    <div class="myBar fill value-60" id="bar6"><div class="skillText">Restful API</div><div
-                            class="percentage">60%</div></div>
-                </div>
-                <div id="myProgress">
-                    <div class="myBar fill value-50" id="bar7"><div class="skillText">UI Design</div><div
-                            class="percentage">50%</div></div>
-                </div>
-
-                <div id="myProgress">
                     <div class="myBar fill value-40" id="bar8"><div class="skillText">Java</div><div
-                            class="percentage">40%</div></div>
+                            class="percentage">50%</div></div>
                 </div>
             </div>
         </div>
     </div>
         </section>
-        <footer>Himanshi Gupta Resume@2022</footer>
+        
         <section id="portfolio" style="height: 1000px;">
             <header class="projectHeader">
                 <h1>PROJECTS <hr> </h1>
@@ -136,7 +176,7 @@
             <div class="projectBtn">
                 <button id="allListProject">ALL</button>
                 <button id="frontEndBtn">Front-End focused</button>
-                <button id="fullStackBtn">Fullstack</button>
+                <button id="fullStackBtn">Full-Stack</button>
               
             </div>
         </header>
@@ -151,14 +191,16 @@
                   </div>
             </div>
         </section>
-        <footer >Himanshi Gupta Resume@2022</footer>
+       
         <section id="achievement" style="height:1000px">
             <header class="projectHeader ">
                 <h1 class="aboutHeader">Achievements
                     <hr></h1>
-               
+                    <div>
+                    <h3 style="text-align: left;">Certification in Full-Stack Development with University of Washington</h3>
+                </div>
            <h3 style="color:#00a1a7;text-align: initial;">College activities</h3>
-                <ul class="achiveList">
+                <ul id="list" class="achiveList">
                     <li style="line-height: 2.9rem;"><b class="bold">Winner of the Project Exhibition</b> event at Udaan 2K14, a National Level Technical Fest held at Shri
                         Sai College of Engineering, presented my final year project titled ‘Synchronous Single-Phase Motor’. </li>
                         <li style="line-height: 2.9rem;">Won Inter-College <b class="bold">Chess tournament</b>, Nagpur University, in which 20 teams participated.
@@ -174,21 +216,18 @@
                 </ul>
         </header>
 
-        <h4 style="color:#e31b6d;">Certification in full-stack development with University of Washington</h4>
-  
+      
         </section>
-        <footer>Himanshi Gupta Resume@2022</footer>
+        
         <section id="contact" style="height: 1000px;">
             <header class="projectHeader ">
                 <h1 class="aboutHeader">Contact
                     <hr class="line"></h1>
-                    <div>
-                        <h5>My email address: Himanshixxxxxxxxxxx@gmail.com</h5>
-                        <h5>Phone Number: (484)-744-xxxx</h5>
-                        <h5>LinkedIn: https://www.linkedin.com/in/himanshi-gupta-40a98981/</h5>
-                    </div>
-                    <h4>Have a question?</h4>
-
+                    
+                    <button class="homeBtn meetingBtn"><a href="https://calendar.google.com/calendar/u/0/r?pli=1">Meeting slot</a></button>
+                    <button id="emailBtn" class="nav"><a href="mailto:himanshigupta2211@gmail.com">Email</a></button>
+                    <button id="mobileBtn" class="nav"><a href="tel:+1 (484) 744 1436">Mobile</a></button>
+                    <h4>Have a question? Please leave a message!</h4>
                     <form action="post" id="contactInfo">
                         <div class="form-group">
                           <label for="fullName">Name</label>
@@ -199,14 +238,14 @@
                           <input class="form-control validate-input" name = "email" type="email" placeholder="abc@xyz.com" id="email" style="height:35px;width:25%">
                         
                         </div>  
-                        <div class="form-group" style="margin-left: -3%;">
+                        <div class="form-group" style="margin-left: -4%;">
                             <label for="number">Phone number</label>
-                            <input class="form-control validate-input" name = "number" type="text"  id="phone" style="height:35px;width:25%">
+                            <input class="form-control validate-input" name = "number" type="text"  id="phone" style="height:35px;width:24%">
                           
                           </div> 
-                        <div class="form-group" style="margin-left: -3%;">
+                        <div class="form-group" style="margin-left: -4%;">
                             <label for="message">Your message:</label>
-                            <input class="form-control validate-input" name = "email" type="text" id="message" placeholder="your message!" maxlength="100" style="min-height:70px;width:25%;font-family: Arial!important;"
+                            <input class="form-control validate-input" name = "email" type="text" id="message" placeholder="your message!" maxlength="100" style="min-height:70px;width:24%;font-family: sans-serif"
                             ></input>
                            </div>
                         
@@ -217,7 +256,24 @@
                   
                    
                 </section>
-                <footer>Himanshi Gupta Resume@2022</footer>
+                <footer>
+                    <table id="footerTable">
+                        <thead>
+                            <tr>
+                                <th>Contacts</th>
+                                <th>Links</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>My email address: Himanshigupta2211@gmail.com</td>
+                                <td>LinkedIn: https://www.linkedin.com/in/himanshi-gupta-40a98981/</td>
+                            </tr>
+                            <td>Phone Number: (484)-744-1436</td>
+                            <td></td>
+                        </tbody>
+                    </table>
+                </footer>
     </div>
     </div>
     <script src="portfolio.js"></script>

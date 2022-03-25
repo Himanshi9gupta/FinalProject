@@ -5,18 +5,29 @@ let navAbout = document.getElementById("about");
 let navPortfolio = document.getElementById("portfolio");
 let navBlog = document.getElementById("achievement");
 let navContact = document.getElementById("contact");
-
+const homePageBtn = document.getElementById('homePageBtn');
 
 document.getElementById('myWork').addEventListener('click',()=>{
     navPortfolio.scrollIntoView({behavior:"smooth"})
-
+   
 });
 document.getElementById('nav1').addEventListener('click',()=>{
     navHome.scrollIntoView({behavior:"smooth"})
+    homePageBtn.classList.remove('homeAnimation'); 
+    homePageBtn.offsetWidth; 
+    homePageBtn.classList.add('homeAnimation'); 
+  
+    
 });
 document.getElementById('nav2').addEventListener('click',()=>{
     navAbout.scrollIntoView({behavior:"smooth"})
-    fill1();fill2();fill3();fill4();fill5();fill6();fill7();fill8();  
+    fill1();fill3();fill4();fill5();fill6();fill7();  
+    const element = document.getElementById('animDiv')
+
+    element.classList.remove('animation'); 
+     element.offsetWidth; 
+    element.classList.add('animation'); 
+    
 });
 document.getElementById('nav3').addEventListener('click',()=>{
     navPortfolio.scrollIntoView({behavior:"smooth"})
@@ -25,6 +36,12 @@ document.getElementById('nav3').addEventListener('click',()=>{
 });
 document.getElementById('nav4').addEventListener('click',()=>{
     navBlog.scrollIntoView({behavior:"smooth"})
+    const element = document.getElementById('list')
+
+    element.classList.remove('animation'); 
+     element.offsetWidth; 
+    element.classList.add('animation'); 
+  
 });
 document.getElementById('nav5').addEventListener('click',()=>{
     navContact.scrollIntoView({behavior:"smooth"})
@@ -39,29 +56,17 @@ const fill1 = ()=>{
          else{
             width++;
             document.getElementById('bar1').style.width = `${width}%`
-            
-        }
-    }, 30);
-
-}
-const fill2 = ()=>{
-    let width = 1;
-
-    const id = setInterval(() => {
-        if(width === 90){
-           clearInterval(id);
-        }
-         else{
-            width++;
             document.getElementById('bar2').style.width = `${width}%`; 
         }
     }, 30);
+
 }
+
 const fill3 = ()=>{
     let width = 1;
 
     const id = setInterval(() => {
-        if(width === 80){
+        if(width === 85){
            clearInterval(id);
         }
          else{
@@ -74,7 +79,7 @@ const fill4 = ()=>{
     let width = 1;
 
     const id = setInterval(() => {
-        if(width === 70){
+        if(width === 80){
            clearInterval(id);
         }
          else{
@@ -87,7 +92,7 @@ const fill5 = ()=>{
     let width = 1;
 
     const id = setInterval(() => {
-        if(width === 65){
+        if(width === 75){
            clearInterval(id);
         }
          else{
@@ -100,12 +105,13 @@ const fill6 = ()=>{
     let width = 1;
 
     const id = setInterval(() => {
-        if(width === 60){
+        if(width === 70){
            clearInterval(id);
         }
          else{
             width++;
             document.getElementById('bar6').style.width = `${width}%`; 
+            document.getElementById('bar7').style.width = `${width}%`; 
         }
     }, 30);
 }
@@ -118,23 +124,12 @@ const fill7 = ()=>{
         }
          else{
             width++;
-            document.getElementById('bar7').style.width = `${width}%`; 
-        }
-    }, 30);
-}
-const fill8 = ()=>{
-    let width = 1;
-
-    const id = setInterval(() => {
-        if(width === 40){
-           clearInterval(id);
-        }
-         else{
-            width++;
             document.getElementById('bar8').style.width = `${width}%`; 
+          
         }
     }, 30);
 }
+
 document.getElementById('frontEndBtn').addEventListener('click',()=>{
     document.getElementById('frontEndBtn').classList.add("buttonActive");
     document.getElementById('allListProject').classList.remove("buttonActive");
@@ -147,7 +142,8 @@ document.getElementById('fullStackBtn').addEventListener('click',()=>{
 })
 
 document.getElementById("allListProject").classList.add("buttonActive");
-
+let response;
+let data ;
 async function createCard (){
 
   let imgCard = document.querySelectorAll('.imgcard');
@@ -162,8 +158,8 @@ async function createCard (){
 if(document.querySelectorAll('.imgcard').length === 5){
     return
 }
-    let response = await fetchImages();
-   let data = await response;
+     response = await fetchImages();
+    data = await response;
     let card;
     let arr = ["Windrose Application","Digital Innovation Lab", "Barclays ATP World Tour","Customer Collaboration Site","HSBC banking portal"];
     let client = ["T-Mobile", "Boeing", "ATP world tour", "Boeing", "HSBC"]
@@ -212,8 +208,6 @@ async function createFrontEnd(){
   if(document.querySelectorAll('.imgcard').length === 3){
     return
 }
-let response = await fetchImages();
-   let data = await response;
     let card;
   let frontEndClient = [ "ATP world tour", "Boeing", "HSBC"];
   let frontEndPro = [ "Barclays ATP World Tour","Digital Innovation Lab","HSBC banking portal"]
@@ -258,8 +252,6 @@ async function createFullStack(){
   if(document.querySelectorAll('.imgcard').length === 1){
     return
 }
-let response = await fetchImages();
-   let data = await response;
     let card;
           let fullStackClient = [ "T-Mobile"];
           let fullStackPro = [ "Windrose Application"]
@@ -473,7 +465,7 @@ document.getElementById('submit').addEventListener('click',(e)=>{
 
     if(username.validity.valid === true && message.validity.valid === true && email.validity.valid === true && phone.validity.valid === true){
       e.preventDefault();
-      para.innerText =`Thank you ${fullname} for submitting your question.`;
+      para.innerHTML =`Thank you <b style="color:#f97352;">${fullname}</b> for leaving a message.`;
         
     }
     else{

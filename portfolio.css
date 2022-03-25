@@ -34,13 +34,14 @@ span.name {
     box-sizing: inherit;
     cursor: pointer;
     display: inline-block;
-    font-size: 13pt;
+    font-size: 15px;
     padding: 10px 20px;
     background: transparent;
     color: white;
-    font-weight: 900;
-    font-family: fantasy!important;
+    font-weight: 400;
+    font-family: sans-serif;
     transition: all 0.5s;
+    margin-top:30px;
 }
 body{
     font-family: Arial!important;
@@ -50,7 +51,7 @@ body{
     height: 100%;
 }
 .flex{
-    display: flex;
+
     padding: 15px;
     background: #001a33;
     margin-top: -9px;
@@ -94,7 +95,7 @@ b{
 }
 i{
     font-size:0.8rem;
-    color:#e00074;
+    color:black;
 }
 .icons{
     width: 84%;
@@ -127,7 +128,27 @@ i{
     width: 295px;
     height: 351px;
    
+
 }
+.githubLink{
+    color:#7b9d6f;
+    text-decoration: none;
+  
+}
+.color{
+    color:#7b9d6f;
+}
+.marginTop5{
+    margin-top: 5%;
+}
+.homeText{
+    font-size: 19px;
+    width: 40%;
+    margin: 0 auto;
+
+}
+
+
 #aboutMe{
   
     height: auto;
@@ -157,15 +178,34 @@ i{
 
 .fill {
  
-    background-color: #00a1a7;
+    background-color: #7b9d6f;
     
 
   }
+  .meetingBtn{
+    margin: 20px;
+    font-size: 1.1rem!important;
+}
+  
   .percentage{
     background-color: transparent;
     color: darkslategray;
     float: right;
     padding: 4px;
+  }
+  .homeBtn{
+    border: 2px solid #f97352;
+    box-sizing: inherit;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    padding: 10px 20px;
+    background: #f97352;
+    color: white;
+    font-weight: 400;
+    font-family: sans-serif;
+    transition: all 0.5s;
+    margin-top: 30px;
   }
   
 .skillText{
@@ -197,13 +237,13 @@ a{
 .nav:hover{
     color:#e00074;
 }
-.value-50  {  width: 1%;width: 50%; background-color: #00a1a7;  }
-.value-60  {  width: 1%;width: 60%;   background-color: #00a1a7;}
-.value-65  { width: 1%; width: 65%;   background-color: #00a1a7;}
-.value-70  {  width: 1%;width: 70%;  background-color: #00a1a7;}
-.value-80  {  width: 1%;width: 80%;  background-color: #00a1a7;}
-.value-90  {  width: 1%;width: 90%;  background-color: #00a1a7;}
-.value-100 { width: 1%; width: 100%; background-color: #00a1a7;}
+.value-50  {  width: 1%;width: 50%; background-color: #7b9d6f;  }
+.value-75 {  width: 1%;width: 75%;   background-color: #7b9d6f;}
+.value-65  { width: 1%; width: 65%;   background-color: #7b9d6f;}
+.value-70  {  width: 1%;width: 70%;  background-color: #7b9d6f;}
+.value-80  {  width: 1%;width: 80%;  background-color: #7b9d6f;}
+.value-90  {  width: 1%;width: 90%;  background-color: #7b9d6f;}
+.value-85 { width: 1%; width: 85%; background-color: #7b9d6f;}
 
 @-webkit-keyframes slideIn {
     0% { width: 0; }
@@ -305,6 +345,9 @@ input:invalid {
    
     left: 44%;
 }
+.navDiv{
+    text-align: center;
+}
 #projectData{
     width: 100%;
     display: flex;
@@ -312,6 +355,15 @@ input:invalid {
     margin:0 auto;
     height:543px;
     justify-content: center
+}
+#emailBtn, #mobileBtn{
+    background-color: #f97352!important;
+    padding: 12px 20px!important;
+    
+}
+.contactBtn{
+    float: right;
+    padding-right: 3%;
 }
 
 .imgDiv{
@@ -423,14 +475,14 @@ input:invalid {
   .oval{
     width: 190px;
     height: 80px;
-    background-color: #00a1a7;
+    background-color: #f97352;
     margin: 20px;
-    border-radius: 50%;
+   
   }
   .ovalDiv{
     background-color: white;
     display: flex;
-    width: 65%;
+    width: 60%;
     margin: 0 auto;
     text-align: center;
   }
@@ -438,13 +490,85 @@ input:invalid {
     margin-top: 30px;
     margin-bottom: 35px;
     color:white;
+    font-size: 20px;
+  }
+  #framework table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #framework{
+    width: 100%;
+    border-spacing: 0px;
+  }
+  #framework td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
   }
 
+  #framework th{
+      background-color: black;
+    color:white;  }
+  #framework tr:nth-child(even) {
+    background-color: #dddddd;
+  }
   footer{
-    background-color:lightgrey;height:5%;width:100%;text-align:center;padding:10px;align-items: center;opacity:0.3
+    background-color:gray;height:5%;width:100%;text-align:center;padding:100px;align-items: center;opacity:0.6
   }
 
+  p {
+    animation-duration: 1s;
+    animation-name: slidein;
+  }
+  li{
+    animation-duration: 1s;
+    animation-name: slidein;
+  }
+  .animation{
+    animation-duration: 2s;
+    animation-name: slidein; 
+  }
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 100%;
+    }
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+.homeAnimation{
+    animation-duration: 2s;
+    animation-name: slidein;
+}
 
+}
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+        
+    }
+    to {
+      margin-left: 0%;
+     
+    }
+  }
+  
+#footerTable{
+    width: 50%;
+    margin: 0 auto;
+}
+#footerTable th{
+    border:none;
+    padding: 10px 5px;
+    text-decoration: underline;
+}
+#footerTable{
+    text-align:left;
+}
 @media screen and (max-width: 1000px) {
     .text{
         color:white;
